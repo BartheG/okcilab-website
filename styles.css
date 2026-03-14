@@ -1,0 +1,130 @@
+:root {
+  --page-background: #001e2a;
+  --panel-background: #001e2a;
+  --title-color: #dafdba;
+  --accent-color: #17bda7;
+  --panel-shadow: 0 12px 18px rgba(0, 0, 0, 0.25);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--page-background);
+  color: var(--title-color);
+  font-family: "Arial Black", "Segoe UI", sans-serif;
+}
+
+.page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--panel-background);
+}
+
+.hero__texture {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  opacity: 0.38;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.085) 1px, transparent 0) 0 0 / 18px 18px,
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(0, 0, 0, 0.02));
+  pointer-events: none;
+}
+
+.hero__logo,
+.hero__title,
+.hero__email {
+  position: absolute;
+  left: 50%;
+  margin: 0;
+  text-align: center;
+}
+
+.hero__logo {
+  top: 52%;
+  z-index: 1;
+  width: min(72vw, 56rem);
+  min-width: 56rem;
+  max-width: calc(100% - 3rem);
+  height: auto;
+  opacity: 0.12;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.hero__title {
+  z-index: 2;
+  top: 47.3%;
+  width: calc(100% - 4rem);
+  color: var(--title-color);
+  font-size: clamp(1.9rem, 4.45vw, 3.35rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  text-wrap: balance;
+  transform: translate(-50%, -50%);
+}
+
+.hero__email {
+  z-index: 2;
+  bottom: 7.2%;
+  color: var(--accent-color);
+  font-size: clamp(1rem, 2vw, 1.95rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+
+.hero__email:hover,
+.hero__email:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero__title {
+    width: min(100% - 2rem, 16ch);
+    top: 46%;
+    font-size: clamp(2rem, 10vw, 3.25rem);
+    line-height: 0.98;
+    white-space: normal;
+  }
+
+  .hero__email {
+    bottom: 6%;
+    width: calc(100% - 2rem);
+    font-size: clamp(1rem, 5vw, 1.35rem);
+  }
+
+  .hero__logo {
+    top: 50%;
+    width: min(88vw, 28rem);
+    min-width: 28rem;
+    opacity: 0.18;
+  }
+}
