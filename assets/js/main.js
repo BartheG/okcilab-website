@@ -11,11 +11,11 @@ if (contactForm) {
         const trimmedValue = value.trim();
 
         if (!trimmedValue) {
-          return "Le prenom est obligatoire.";
+          return "Le prénom est obligatoire.";
         }
 
         if (!namePattern.test(trimmedValue)) {
-          return "Le prenom doit contenir au moins 2 lettres.";
+          return "Le prénom doit contenir au moins 2 lettres.";
         }
 
         return "";
@@ -63,7 +63,7 @@ if (contactForm) {
         }
 
         if (trimmedValue.length < 20) {
-          return "Le message doit contenir au moins 20 caracteres.";
+          return "Le message doit contenir au moins 20 caractères.";
         }
 
         return "";
@@ -127,7 +127,7 @@ if (contactForm) {
 
     if (!isValid) {
       event.preventDefault();
-      setStatus("Merci de corriger les champs signales avant l'envoi.", "error");
+      setStatus("Merci de corriger les champs signalés avant l'envoi.", "error");
 
       const firstInvalidField = Object.values(fields).find(
         (field) => field.input.getAttribute("aria-invalid") === "true",
@@ -139,7 +139,7 @@ if (contactForm) {
 
     event.preventDefault();
     setStatus(
-      "Le formulaire est valide. Il reste a brancher l'envoi vers votre backend ou votre service d'email.",
+      "Le formulaire est valide. Il reste à brancher l'envoi vers votre backend ou votre service d'email.",
       "success",
     );
   });
