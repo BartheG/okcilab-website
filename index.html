@@ -4,16 +4,338 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Okcilab</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta
+      name="description"
+      content="Okcilab transforme vos concepts en produits imprimés en 3D, du prototype à la production."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
-    <main class="page">
+    <main class="landing" id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__texture" aria-hidden="true"></div>
-        <img class="hero__logo" src="ressources/logo.png" alt="" aria-hidden="true">
-        <h1 id="hero-title" class="hero__title">NOTRE SITE WEB ARRIVE BIENTÔT</h1>
-        <a class="hero__email" href="mailto:contact@okcilab.com">contact@okcilab.com</a>
+        <div class="hero__media">
+          <div class="hero__topbar shell">
+            <img
+              class="hero__brand"
+              src="assets/images/logo.png"
+              alt="Okcilab"
+            >
+          </div>
+        </div>
+
+        <div class="hero__panel">
+          <div class="hero__content shell">
+            <div class="hero__watermark" aria-hidden="true">
+              <img src="assets/images/logo.png" alt="">
+            </div>
+
+            <div class="hero__copy">
+              <h1 id="hero-title" class="hero__title">Okcilab c&apos;est quoi.</h1>
+              <p class="hero__lead">
+                Specialistes de la conception et de l&apos;impression 3D, nous
+                donnons vie a vos idees grace a des solutions innovantes, sur
+                mesure et locales. Du prototypage rapide aux petites series,
+                Okcilab transforme vos concepts en objets concrets, durables et
+                fonctionnels.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
+
+      <section class="features" id="features" aria-labelledby="features-title">
+        <div class="features__bars" aria-hidden="true">
+          <span class="features__bar features__bar--mint"></span>
+          <span class="features__bar features__bar--teal"></span>
+          <span class="features__bar features__bar--blue"></span>
+          <span class="features__bar features__bar--navy"></span>
+        </div>
+
+        <div class="features__watermark" aria-hidden="true">
+          <img src="assets/images/logo.png" alt="">
+        </div>
+
+        <div class="shell">
+          <h2 id="features-title" class="features__heading">
+            Donnez forme a chaque idee.
+          </h2>
+
+          <div class="features__grid">
+            <article class="feature-card">
+              <h2>Du concept au prototype</h2>
+              <p>
+                De l&apos;idee initiale a la maquette fonctionnelle, nous vous
+                aidons a valider rapidement vos concepts.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <h2>Personnalisation illimitee</h2>
+              <p>
+                Formats, finitions, marquages, textures et couleurs: chaque
+                produit est adapte a votre usage, votre marque et votre public.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <h2>Production eco-responsable</h2>
+              <p>
+                Fabrication locale, production a la demande et optimisation
+                matiere pour limiter les pertes et les transports inutiles.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <h2>Adaptabilite</h2>
+              <p>
+                Petite serie, piece unique ou ajustement sur mesure: notre
+                workflow reste agile a toutes les etapes.
+              </p>
+            </article>
+
+            <article class="feature-card feature-card--wide">
+              <h2>Materiaux techniques avances</h2>
+              <p>
+                PLA, PETG, TPU et autres polymeres techniques pour repondre aux
+                contraintes esthetiques, mecaniques ou thermiques de vos
+                projets.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="process" id="process" aria-labelledby="process-title">
+        <div class="process__watermark" aria-hidden="true">
+          <img src="assets/images/logo.png" alt="">
+        </div>
+
+        <div class="shell">
+          <div class="process__intro">
+            <p class="process__eyebrow">Notre processus simple &amp; transparent</p>
+            <h2 id="process-title">
+              Une methode claire pour transformer une intention en produit
+              fini.
+            </h2>
+          </div>
+
+          <div class="process__grid">
+            <article class="process-card">
+              <span class="process-card__number">01</span>
+              <h3>Brief &amp; analyse</h3>
+              <p>
+                Etude de votre besoin, conseil sur les materiaux, faisabilite
+                et budget.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <span class="process-card__number">02</span>
+              <h3>Modelisation 3D</h3>
+              <p>
+                Creation ou adaptation de votre modele avec validations a
+                chaque etape.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <span class="process-card__number">03</span>
+              <h3>Impression &amp; controle</h3>
+              <p>
+                Production sur nos machines industrielles. Chaque piece est
+                controlee dimensionnellement avant expedition.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <span class="process-card__number">04</span>
+              <h3>Finition &amp; livraison</h3>
+              <p>
+                Post-traitement selon vos exigences, puis livraison securisee
+                sous 24 a 72h.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="products" id="products" aria-labelledby="products-title">
+        <div class="products__glow products__glow--left" aria-hidden="true"></div>
+        <div class="products__glow products__glow--right" aria-hidden="true"></div>
+
+        <div class="shell">
+          <header class="products__header">
+            <h2 id="products-title">Nos differents produits.</h2>
+          </header>
+
+          <div class="products__grid">
+            <article class="product-tile">
+              <span class="product-tile__label">Legy<br>Pop</span>
+            </article>
+            <article class="product-tile">
+              <span class="product-tile__label">Mata Box</span>
+            </article>
+            <article class="product-tile">
+              <span class="product-tile__label">Name Stand</span>
+            </article>
+            <article class="product-tile">
+              <span class="product-tile__label">Clumb</span>
+            </article>
+            <article class="product-tile">
+              <span class="product-tile__label">Custom Kit</span>
+            </article>
+            <article class="product-tile">
+              <span class="product-tile__label">Display Set</span>
+            </article>
+          </div>
+
+          <a class="products__cta" href="#contact">En voir +</a>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact__bars" aria-hidden="true">
+          <span class="contact__bar contact__bar--navy"></span>
+          <span class="contact__bar contact__bar--blue"></span>
+          <span class="contact__bar contact__bar--teal"></span>
+          <span class="contact__bar contact__bar--mint"></span>
+        </div>
+
+        <div class="shell contact__shell">
+          <header class="contact__header">
+            <h2 id="contact-title" class="contact__heading">Contact</h2>
+            <a href="mailto:contact@okcilab.com">contact@okcilab.com</a>
+          </header>
+
+          <form class="contact__form" id="contact-form" novalidate>
+            <label class="contact__field">
+              <span>Name</span>
+              <input
+                type="text"
+                name="name"
+                placeholder="Value"
+                autocomplete="given-name"
+                required
+                minlength="2"
+                maxlength="50"
+              >
+              <span class="contact__error" data-error-for="name" aria-live="polite"></span>
+            </label>
+
+            <label class="contact__field">
+              <span>Surname</span>
+              <input
+                type="text"
+                name="surname"
+                placeholder="Value"
+                autocomplete="family-name"
+                required
+                minlength="2"
+                maxlength="50"
+              >
+              <span class="contact__error" data-error-for="surname" aria-live="polite"></span>
+            </label>
+
+            <label class="contact__field">
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="Value"
+                autocomplete="email"
+                inputmode="email"
+                required
+                maxlength="120"
+              >
+              <span class="contact__error" data-error-for="email" aria-live="polite"></span>
+            </label>
+
+            <label class="contact__field">
+              <span>Message</span>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Value"
+                required
+                minlength="20"
+                maxlength="1200"
+              ></textarea>
+              <span class="contact__error" data-error-for="message" aria-live="polite"></span>
+            </label>
+
+            <button type="submit">Submit</button>
+            <p class="contact__status" id="contact-status" aria-live="polite"></p>
+          </form>
+
+        </div>
+      </section>
+
+      <footer class="footer" aria-labelledby="footer-title">
+        <div class="footer__accent" aria-hidden="true">
+          <span class="footer__accent-line footer__accent-line--mint"></span>
+          <span class="footer__accent-line footer__accent-line--teal"></span>
+          <span class="footer__accent-line footer__accent-line--blue"></span>
+        </div>
+
+        <div class="shell footer__shell">
+          <div class="footer__brand">
+            <img
+              id="footer-title"
+              class="footer__logo"
+              src="assets/images/logo.png"
+              alt="Okcilab"
+            >
+            <p>
+              Conception de produits, impression 3D et accompagnement de projet,
+              du prototype a la petite serie.
+            </p>
+          </div>
+
+          <nav class="footer__nav" aria-label="Navigation de pied de page">
+            <a href="#features">Expertises</a>
+            <a href="#process">Processus</a>
+            <a href="#products">Produits</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <div class="footer__info">
+            <a class="footer__mail" href="mailto:contact@okcilab.com">contact@okcilab.com</a>
+
+            <nav class="footer__legal" aria-label="Liens légaux">
+              <a href="">Mentions legales</a>
+              <a href="">Confidentialite</a>
+              <a href="">Cookies</a>
+            </nav>
+
+            <div class="footer__socials" aria-label="Réseaux sociaux">
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5Zm5.25-3A1.25 1.25 0 1 1 16 7.75 1.25 1.25 0 0 1 17.25 6.5Z"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21.6 7.2a2.86 2.86 0 0 0-2-2C17.9 4.7 12 4.7 12 4.7s-5.9 0-7.6.5a2.86 2.86 0 0 0-2 2A30.11 30.11 0 0 0 2 12a30.11 30.11 0 0 0 .4 4.8 2.86 2.86 0 0 0 2 2c1.7.5 7.6.5 7.6.5s5.9 0 7.6-.5a2.86 2.86 0 0 0 2-2A30.11 30.11 0 0 0 22 12a30.11 30.11 0 0 0-.4-4.8ZM10 15.5v-7l6 3.5-6 3.5Z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom shell">
+          <p>© 2026 Okcilab. Tous droits reserves.</p>
+          <div class="footer__bottom-links">
+            <a href="#top">Retour en haut</a>
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
+  <script src="assets/js/main.js"></script>
 </html>
