@@ -534,6 +534,10 @@ a {
   position: relative;
 }
 
+.contact__botcheck {
+  display: none;
+}
+
 .contact__form span {
   color: #3d4d56;
   font-size: 0.95rem;
@@ -596,6 +600,11 @@ a {
   font-weight: 500;
   padding: 0.82rem 1rem;
   cursor: pointer;
+}
+
+.contact__form button:disabled {
+  opacity: 0.7;
+  cursor: wait;
 }
 
 .contact__status {

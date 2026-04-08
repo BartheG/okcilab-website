@@ -2,6 +2,7 @@ const contactForm = document.querySelector("#contact-form");
 
 if (contactForm) {
   const status = contactForm.querySelector("#contact-status");
+  const submitButton = contactForm.querySelector('button[type="submit"]');
   const namePattern = /^[\p{L}][\p{L}\s'-]{1,49}$/u;
 
   const fields = {
@@ -80,6 +81,12 @@ if (contactForm) {
     status.dataset.state = state;
   };
 
+  const clearFormErrors = () => {
+    Object.keys(fields).forEach((fieldName) => {
+      setFieldError(fieldName, "");
+    });
+  };
+
   const setFieldError = (fieldName, message) => {
     const field = fields[fieldName];
     const errorNode = contactForm.querySelector(`[data-error-for="${fieldName}"]`);
@@ -123,10 +130,11 @@ if (contactForm) {
   });
 
   contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
     const isValid = validateForm();
 
     if (!isValid) {
-      event.preventDefault();
       setStatus("Merci de corriger les champs signalés avant l'envoi.", "error");
 
       const firstInvalidField = Object.values(fields).find(
@@ -137,10 +145,55 @@ if (contactForm) {
       return;
     }
 
-    event.preventDefault();
-    setStatus(
-      "Le formulaire est valide. Il reste à brancher l'envoi vers votre backend ou votre service d'email.",
-      "success",
-    );
+    const formData = new FormData(contactForm);
+    const firstName = fields.name.input.value.trim();
+    const lastName = fields.surname.input.value.trim();
+    const fullName = `${firstName} ${lastName}`.trim();
+
+    if (fullName) {
+      formData.set("from_name", fullName);
+    }
+
+    if (submitButton) {
+      submitButton.disabled = true;
+    }
+
+    setStatus("Envoi en cours...", "");
+
+    fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then(async (response) => {
+        let result = null;
+
+        try {
+          result = await response.json();
+        } catch {
+          result = null;
+        }
+
+        if (!response.ok || !result?.success) {
+          throw new Error(result?.message || "L'envoi a échoué.");
+        }
+
+        contactForm.reset();
+        clearFormErrors();
+        setStatus("Message envoyé avec succès.", "success");
+      })
+      .catch((error) => {
+        setStatus(
+          error.message || "Impossible d'envoyer le formulaire pour le moment.",
+          "error",
+        );
+      })
+      .finally(() => {
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      });
   });
 }
