@@ -1,15 +1,17 @@
 :root {
   --page-bg: #f4f4ef;
   --surface: #ffffff;
-  --navy: #001e2a;
+  --navy: #012030;
   --blue: #005c7d;
   --teal: #17bda7;
   --mint: #dafdba;
-  --text: #143241;
-  --muted: #5e7682;
-  --line: rgba(0, 30, 42, 0.12);
-  --shadow-soft: 0 24px 54px rgba(0, 30, 42, 0.09);
-  --shadow-card: 0 18px 42px rgba(0, 30, 42, 0.08);
+  --text: #012030;
+  --muted: rgba(1, 32, 48, 0.72);
+  --line: rgba(1, 32, 48, 0.12);
+  --shadow-soft: 0 24px 54px rgba(1, 32, 48, 0.09);
+  --shadow-card: 0 18px 42px rgba(1, 32, 48, 0.08);
+  --font-body: "Articulat CF", "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Manifold Extd CF", "Manifold Extended CF", "Manifold CF", "Exo 2", "Arial Narrow", sans-serif;
 }
 
 *,
@@ -29,7 +31,7 @@ body {
     radial-gradient(circle at top, rgba(23, 189, 167, 0.08), transparent 28%),
     linear-gradient(180deg, #fcfcfa, var(--page-bg));
   color: var(--text);
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-body);
 }
 
 a {
@@ -106,7 +108,7 @@ a {
   margin: 0;
   max-width: 10ch;
   color: #ffffff;
-  font-family: "Exo 2", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2.8rem, 5.5vw, 4.9rem);
   font-style: italic;
   font-weight: 800;
@@ -183,7 +185,7 @@ a {
   border: 1px solid var(--line);
   border-radius: 1rem;
   background: linear-gradient(180deg, #ffffff, #fcfffd);
-  box-shadow: 0 10px 28px rgba(0, 30, 42, 0.04);
+  box-shadow: 0 10px 28px rgba(1, 32, 48, 0.04);
 }
 
 .legal-section h2 {

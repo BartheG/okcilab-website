@@ -1,3 +1,28 @@
+const productsCta = document.querySelector(".products__cta");
+const contactSection = document.querySelector("#contact");
+
+if (productsCta && contactSection) {
+  let ctaEffectTimeout = 0;
+
+  productsCta.addEventListener("click", () => {
+    productsCta.classList.remove("is-activated");
+    contactSection.classList.remove("contact--spotlight");
+
+    // Force a reflow so repeated clicks replay the animation reliably.
+    void productsCta.offsetWidth;
+    void contactSection.offsetWidth;
+
+    productsCta.classList.add("is-activated");
+    contactSection.classList.add("contact--spotlight");
+
+    window.clearTimeout(ctaEffectTimeout);
+    ctaEffectTimeout = window.setTimeout(() => {
+      productsCta.classList.remove("is-activated");
+      contactSection.classList.remove("contact--spotlight");
+    }, 950);
+  });
+}
+
 const contactForm = document.querySelector("#contact-form");
 
 if (contactForm) {
